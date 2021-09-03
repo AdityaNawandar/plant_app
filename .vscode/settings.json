@@ -1,0 +1,5 @@
+{
+    "editor.semanticTokenColorCustomizations":{ "[Solarized Light]": {
+        "selectionBackground": "#d4922f"
+    }}
+}
