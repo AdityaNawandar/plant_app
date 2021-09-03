@@ -64,7 +64,6 @@ class RecommendedPlantCard extends StatelessWidget {
     this.imageUrl = '',
     this.price = 0,
     this.showPlantDetails,
-    //required this.size,
   }) : super(key: key);
 
   final String plantName, countryName, imageUrl;
@@ -88,9 +87,6 @@ class RecommendedPlantCard extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(imageUrl),
-            //GestureDetector(
-            //onTap: () => showPlantDetails!(),
-            //child:
             Container(
               padding: EdgeInsets.all(constDefaultPadding / 2),
               decoration: BoxDecoration(
@@ -136,7 +132,6 @@ class RecommendedPlantCard extends StatelessWidget {
                 ],
               ),
             ),
-            //),
           ],
         ),
       ),

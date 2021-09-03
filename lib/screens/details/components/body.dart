@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'buy_now_and_description_on_details_screen.dart';
 import 'image_and_icons_on_details_screen.dart';
 import 'title_and_price_on_details_screen.dart';
 
@@ -22,35 +23,7 @@ class Body extends StatelessWidget {
           SizedBox(
             height: constDefaultPadding,
           ),
-          Row(
-            children: [
-              SizedBox(
-                width: size.width / 2,
-                height: 84,
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                  style: TextButton.styleFrom(
-                    backgroundColor: constPrimaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text('Description'),
-                ),
-              )
-            ],
-          ),
+          BuyNowAndDescriptionOnDetailsPage(size: size),
         ],
       ),
     );
