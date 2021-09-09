@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/details/components/plant_description.dart';
 
 import '../../../constants.dart';
 
@@ -12,6 +13,24 @@ class BuyNowAndDescriptionOnDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void _showDescription() {
+      showModalBottomSheet(
+          context: context,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40),
+              topRight: Radius.circular(40),
+            ),
+          ),
+          builder: (context) {
+            return Container(
+              height: MediaQuery.of(context).size.height * 0.75,
+              padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+              child: PlantDescription(),
+            );
+          });
+    }
+
     return Row(
       children: [
         SizedBox(
@@ -35,7 +54,9 @@ class BuyNowAndDescriptionOnDetailsPage extends StatelessWidget {
         ),
         Expanded(
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              _showDescription();
+            },
             child: Text('Description'),
           ),
         )
