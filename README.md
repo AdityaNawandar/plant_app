@@ -1,6 +1,6 @@
 # plant_app
 
-A new Flutter project.
+UI for a plant shoppy app
 
 ## Getting Started
 
